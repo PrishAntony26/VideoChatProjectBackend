@@ -3,7 +3,7 @@ const http = require("http")
 const app = express()
 const server = http.createServer(app)
 const io = require("socket.io")(server, {
-	cors: {
+	cors: {//Que acepte peticiones del siguiente origin (pertenece al front)
 		origin: "http://localhost:3000",
 		methods: [ "GET", "POST" ]
 	}
